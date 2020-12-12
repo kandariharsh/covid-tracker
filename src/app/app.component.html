@@ -1,0 +1,39 @@
+
+
+<div>
+    <div style="background-color:orangered; font-size: large; height:30px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">  
+      <h4 style="color:white; text-align:center">Coronavirus (COVID-19) Live Status With Country</h4>  
+  </div> 
+  <br>
+  <label class="label warning">Total Confirmed Worldwide :</label><label class="labeldt">{{TotalConfirmed}}</label>
+  <label class="label danger">Total Deaths Worldwide :</label><label class="labeldt">{{TotalDeaths}}</label>
+  <label class="label success">Total Recovered Worldwide :</label><label class="labeldt">{{TotalRecovered}}</label>
+  <br>
+  <br>
+  <br>
+  <br>
+    <label class="label info">Country Name:</label>&nbsp;&nbsp;
+    <select (change)="getCountry($event.target.value)">
+      <option *ngFor="let country of countries" value={{country.Slug}}>
+      {{country.Country}}
+      </option>
+    </select> &nbsp;&nbsp;
+    <button (click)="getDataCountryWise()" class="button button4">Seach Corona Data</button>
+    <h1 style="text-align: center; color:seagreen;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">COUNTRY-WISE DATA AS OF : {{currentDate}}</h1>
+    <table align="center" border="1" cellpadding="4" cellspacing="4">  
+      <tr>  
+          <th style="background-color:beige;color: black">COUNTRY</th>
+          <th style="background-color:gray;color:black">TOTAL CONFIRMED</th>  
+          <th style="background-color: beige;color:black">TOTAL RECOVERED</th>  
+          <th style="background-color:gray;color: black">TOTAL DEATHS</th>  
+          <th style="background-color:beige;color: black">TOTAL ACTIVE</th>  
+      </tr>    
+          <tr>  
+              <td>{{Country}}</td>
+              <td>{{Confirmed}}</td>  
+              <td>{{Recovered}}</td>  
+              <td>{{Deaths}}</td>  
+              <td>{{Active}}</td>  
+          </tr>
+  </table>
+  </div>
