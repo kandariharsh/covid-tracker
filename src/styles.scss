@@ -23,6 +23,7 @@ tr:nth-child(even) {
     font-size: large;
     color: white;
     padding: 8px;
+    margin: 0 16px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
@@ -77,7 +78,9 @@ input[type=text], select {
 .labeldt {
     font-size: large;
     color: red;
-    padding: 8px;
+    padding: 0 18px ;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: large;
-  }
+    font-size:xx-large;
+    border: 1px solid black;
+    margin: 0 20px;
+}
